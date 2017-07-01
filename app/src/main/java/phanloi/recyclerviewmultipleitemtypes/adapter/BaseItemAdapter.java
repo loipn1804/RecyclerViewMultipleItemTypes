@@ -24,7 +24,6 @@ public abstract class BaseItemAdapter extends RecyclerView.Adapter<BaseItemViewH
         notifyDataSetChanged();
     }
 
-
     @Override
     public void onBindViewHolder(BaseItemViewHolder holder, int position) {
         holder.setItem(mItemList.get(position));
