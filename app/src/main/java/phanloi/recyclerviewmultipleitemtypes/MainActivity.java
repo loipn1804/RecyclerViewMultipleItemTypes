@@ -1,7 +1,6 @@
 package phanloi.recyclerviewmultipleitemtypes;
 
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import phanloi.recyclerviewmultipleitemtypes.adapter.MyAdapter;
-import phanloi.recyclerviewmultipleitemtypes.adapter.SimpleDividerItemDecoration;
+import phanloi.recyclerviewmultipleitemtypes.adapter.SpaceDividerItemDecoration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         MyAdapter myAdapter = new MyAdapter();
         mRecyclerView.setAdapter(myAdapter);
-        mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(ContextCompat.getDrawable(this, R.drawable.divider), 0, true, false));
+        mRecyclerView.addItemDecoration(new SpaceDividerItemDecoration(getResources().getDimensionPixelOffset(R.dimen.divider)));
         myAdapter.setItemList(ItemBuilder.randomList(this));
     }
 }

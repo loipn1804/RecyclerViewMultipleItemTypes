@@ -6,4 +6,6 @@
     <dimen name="textSize">16sp</dimen>
 
     <dimen name="adsPadding">20dp</dimen>
+
+    <dimen name="divider">1dp</dimen>
 </resources>
